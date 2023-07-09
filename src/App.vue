@@ -8,7 +8,9 @@
     </ul>
     <img src="./assets/logo.png" class="logo" />
   </div>
-  <Cont />
+
+  <Cont :게시물="게시물" />
+  
   <div class="footer">
     <ul class="footer-button-plus">
       <input type="file" id="file" class="inputfile" />
@@ -19,9 +21,15 @@
 
 <script>
 import Cont from './components/ContainerView.vue';
+import postdata from './assets/postData.js'
 
 export default {
   name: 'App',
+    data(){
+        return{
+            게시물 : postdata
+        }
+    },
   components: {
     Cont,
 
